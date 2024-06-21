@@ -26,4 +26,4 @@ def predict_password_strength(exampleInputPassword1, pass_model):
     features = np.array(extract_features(exampleInputPassword1)).reshape(1, -1)
     prediction = pass_model.predict(features)[0]
     strength_mapping = {'weak': 0, 'medium': 1, 'strong': 2}
-    return ['weak', 'meduim', 'strong'][strength_mapping.get(prediction.lower(), 0)]
+    return ['weak', 'medium', 'strong'][strength_mapping.get(prediction.lower(), 0)]
